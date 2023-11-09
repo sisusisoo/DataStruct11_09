@@ -10,14 +10,14 @@
 //False일때 0으로 정의합니다.
 #define MAX_VERTICES	100	
 //최대 정점의 수를 나타냅니다.
-#define INF	1000000	
+#define INF	1000
 // 간선이 연결되어있지 않는 경우를 무한대로 나타냅니다.
 
 typedef struct GraphType {
 	int n;
 	// 정점의 개수입니다. 
 	int weight[MAX_VERTICES][MAX_VERTICES];
-	//네트워크의 인접 행렬을 초기화합니다.
+	//네트워크의 인접 행렬을 초기화
 } GraphType;
 
 int distance[MAX_VERTICES];
@@ -127,16 +127,16 @@ int main(void)
 		 {  3,  0,  5,  4,  1,  7,  8,INF,INF,INF},//2
 		 {INF,  5,  0,  2,INF,INF,  6,  5,INF,INF},//3
 		 {INF,  4,  2,  0, 13,INF,INF, 14,INF, 16},//4
-		 {INF,  1,INF, 13,  0,  9,INF,INF, 18,INF},//5
+		 {INF,  1,INF, 13,  0,  9,INF,INF, 18, 17},//5
 		 { 11,  7,INF,INF,  9,  0,INF,INF,INF,INF},//6
 		 { 12,  8,  6,INF,INF,INF,  0, 13,INF,INF},//7
 		 {INF,INF,  5, 14,INF,INF, 13,  0,INF, 15},//8
 		 {INF,INF,INF,INF, 18,INF,INF,INF,  0, 10},//9
-		 {INF,INF,INF, 16,INF,INF,INF, 15, 10,  0},//10
+		 {INF,INF,INF, 16, 17,INF,INF, 15, 10,  0},//10
 		 }
 
 	};
-	printf("인접행렬 구현 ");
+	printf("인접행렬 구현 \n");
 	shortest_path(&h, 0);
 	return 0;
 }
